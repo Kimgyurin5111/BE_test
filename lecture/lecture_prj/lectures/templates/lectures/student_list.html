@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>학생 목록</h2>
+
+    {% for student in students %}
+        <h4>- {{student.id}} {{student.name}}</h4>
+        <p>수강 강의:  {{student.lecture.code}} {{student.lecture.title}}</p>
+        <hr>
+    {% empty %}
+        <p>수강 강의가 없습니다.</p>
+    {% endfor %}
+        </p>
+</body>
+</html>
